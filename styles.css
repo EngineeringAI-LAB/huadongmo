@@ -438,7 +438,9 @@ main {
 .teaching-card,
 .engagement-card,
 .contact-card,
-.project-card {
+.project-card,
+.grant-card,
+.grant-stat {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 255, 248, 0.78);
@@ -475,6 +477,7 @@ main {
 .engagement-card p,
 .contact-card p,
 .project-card p,
+.grant-card p,
 .timeline-item p {
   margin: 0;
   color: var(--muted);
@@ -718,6 +721,59 @@ main {
     var(--surface-strong);
 }
 
+.grant-overview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.grant-stat {
+  min-height: 116px;
+  padding: 20px;
+}
+
+.grant-stat strong {
+  display: block;
+  color: var(--ink);
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.grant-stat span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.grant-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.grant-card {
+  display: grid;
+  gap: 8px;
+  min-height: 220px;
+  padding: 20px;
+}
+
+.grant-card span {
+  color: var(--yellow-deep);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.grant-card h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.28;
+}
+
 .contact-grid {
   align-items: stretch;
 }
@@ -769,7 +825,9 @@ main {
   .teaching-grid,
   .engagement-grid,
   .contact-grid,
-  .project-grid {
+  .project-grid,
+  .grant-overview,
+  .grant-list {
     grid-template-columns: 1fr;
   }
 
