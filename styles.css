@@ -724,44 +724,46 @@ main {
 .grant-overview {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  gap: 12px;
 }
 
 .grant-stat {
-  min-height: 116px;
-  padding: 20px;
+  min-height: 96px;
+  padding: 16px;
 }
 
 .grant-stat strong {
   display: block;
   color: var(--ink);
-  font-size: 28px;
+  font-size: 24px;
   line-height: 1.1;
 }
 
 .grant-stat span {
   display: block;
-  margin-top: 8px;
+  margin-top: 6px;
   color: var(--muted);
+  font-size: 14px;
   line-height: 1.4;
 }
 
 .grant-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  gap: 12px;
 }
 
 .grant-card {
   display: grid;
-  gap: 8px;
-  min-height: 220px;
-  padding: 20px;
+  align-content: start;
+  gap: 6px;
+  min-height: 168px;
+  padding: 16px;
 }
 
 .grant-card span {
   color: var(--yellow-deep);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -770,8 +772,13 @@ main {
 .grant-card h3 {
   margin: 0;
   color: var(--ink);
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.28;
+}
+
+.grant-card p {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .contact-grid {
@@ -825,9 +832,7 @@ main {
   .teaching-grid,
   .engagement-grid,
   .contact-grid,
-  .project-grid,
-  .grant-overview,
-  .grant-list {
+  .project-grid {
     grid-template-columns: 1fr;
   }
 
@@ -841,6 +846,13 @@ main {
 
   .project-feature-actions {
     min-width: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .grant-overview,
+  .grant-list {
+    grid-template-columns: 1fr;
   }
 }
 
